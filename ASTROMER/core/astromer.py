@@ -35,7 +35,7 @@ def get_ASTROMER(num_layers=2,
                   name='times')
     mask   = Input(shape=(maxlen, 1),
                   batch_size=None,
-                  name='mask')
+                  name='mask_in')
     length = Input(shape=(maxlen,),
                   batch_size=None,
                   dtype=tf.int32,

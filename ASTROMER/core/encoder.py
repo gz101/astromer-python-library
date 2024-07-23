@@ -71,6 +71,6 @@ class Encoder(tf.keras.layers.Layer):
         x = self.dropout(transformed_input, training=training)
 
         for i in range(self.num_layers):
-            x = self.enc_layers[i](x, training, data['mask_in'])
+            x = self.enc_layers[i](x=x, training=training, mask=data['mask_in'])
 
         return x  # (batch_size, input_seq_len, d_model)
