@@ -40,7 +40,7 @@ def get_MBAstromer(model_names: list[str], collapse="average") -> Model:
     outputs = []
 
     for i, model_name in enumerate(model_names):
-        local_path = os.path.join("./weights", model_name)
+        local_path = os.path.join("../weights", model_name)
 
         if not os.path.isdir(local_path):
             raise ValueError(f"Pre-trained model not found: {local_path}.")
